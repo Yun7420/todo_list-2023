@@ -18,4 +18,3 @@
 - 배포 환경에서 사용할 파일을 생성합니다. `npm run build`
 - static 파일 서빙 프로그램 생성합니다. `npm install -g(현재 컴퓨터 모든 경로 사용가능) serve`
 - build폴더 기반으로 웹 애플리케이션 서빙합니다. `serve -s build`
-"# todo_list-2023" 
