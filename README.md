@@ -9,7 +9,7 @@
 ## 사용스택
 - javascript, react를 사용하여 사이트를 완성합니다. 
 - styled-components를 사용하여 css를 관리합니다.
-- git을 사용하여 파일을 관리합니다.
+- git, github을 사용하여 파일을 관리합니다.
 - build를 통해 코드와 파일, 이미지, css파일등을 패키징 합니다.
 
 ## 프로젝트 실행과 마무리
