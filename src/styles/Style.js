@@ -76,6 +76,23 @@ export const FormBox = styled.form`
 `;
 
 // FilterButton 스타일
+export const FilterBox = styled.div`
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+
+  button {
+    padding: 0.5rem 0;
+    flex: 1;
+    background-color:#555;
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+
+  .active {
+    background-color: #000;
+  }
+`
 
 // TodoList 스타일
 export const ListLength = styled.h2`
@@ -95,6 +112,10 @@ export const List = styled.ul`
     span {
       padding: 0.3rem;
       width: 100%;
+    }
+
+    .line {
+      text-decoration: line-through;
     }
 
     div {

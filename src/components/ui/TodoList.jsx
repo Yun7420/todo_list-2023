@@ -32,7 +32,7 @@ const TodoList = ({ task, toggleTaskCompleted, editTaskCompleted, deleteTaskComp
     <li className="viewBox">
       <label>
         <input type="checkbox" className="viewInput" onChange={() => toggleTaskCompleted(task.id)} />
-        <span>{task.name}</span>
+        <span className={task.copleted ? "line" : ""}>{task.name}</span>
       </label>
       <div>
         <button onClick={() => setIsEdit(true)}>수정</button>

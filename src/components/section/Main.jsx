@@ -27,6 +27,15 @@ if (!JSON.parse(localStorage.getItem("todoList"))) {
   seedData();
 }
 
+// 필터 버튼 생성
+const FilterMap = {
+  전체 : () => true,
+  완료 :  (task) => task.completed,
+  미완료 : (task) => !task.completed
+}
+
+const FilterNames = Object.keys(FilterMap);
+
 const Main = () => {
   // 체크
   const toggleTaskCompleted = (id) => {
@@ -66,20 +75,23 @@ const Main = () => {
     setTasks(deleteTask);
   };
 
+  // 필터 기능
+  const [filter, setFilter] = useState("전체")
+
   // 할일 리스트 생성
   const [tasks, setTasks] = useState(
     JSON.parse(localStorage.getItem("todoList"))
   );
 
-  const tasksList = tasks.map((task) => (
-    <TodoList task={task} toggleTaskCompleted={toggleTaskCompleted} editTaskCompleted={editTaskCompleted} deleteTaskCompleted={deleteTaskCompleted} />
+  const tasksList = tasks.filter(FilterMap[filter]).map((task) => (
+    <TodoList key={task.id} task={task} toggleTaskCompleted={toggleTaskCompleted} editTaskCompleted={editTaskCompleted} deleteTaskCompleted={deleteTaskCompleted} />
   ));
 
   return (
     <>
       <Title />
       <Form setData={setData} tasks={tasks} setTasks={setTasks} />
-      <FilterButton></FilterButton>
+      <FilterButton FilterNames={FilterNames} filter={filter} setFilter={setFilter}></FilterButton>
       <ListLength>총 {tasksList.length}개 있습니다.</ListLength>
       <List>{tasksList}</List>
     </>

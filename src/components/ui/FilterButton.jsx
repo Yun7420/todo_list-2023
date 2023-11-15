@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import { FilterBox } from "../../styles/Style";
 
-const FilterButton = () => {
-  return (
-    <div>FilterButton</div>
-  )
-}
+const FilterButton = ({ FilterNames, filter, setFilter }) => {
+  const FilterButtons = FilterNames.map((filterbutton) => (
+    <button className={filterbutton === filter ? "active" : ""} onClick={() => setFilter(filterbutton)}>{filterbutton}</button>
+  ));
 
-export default FilterButton
+  return <FilterBox>{FilterButtons}</FilterBox>;
+};
+
+export default FilterButton;
