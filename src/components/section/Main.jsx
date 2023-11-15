@@ -11,7 +11,7 @@ import TodoList from "../ui/TodoList";
 // 초기 데이터
 const seedData = () => {
   const seed = [
-    { id: "list1", name: "REACT 학습하기", completed: false },
+    { id: "list1", name: "REACT 학습하기", completed: true },
     { id: "list2", name: "VUE 학습하기", completed: false },
     { id: "list3", name: "NODE 학습하기", completed: false },
   ];

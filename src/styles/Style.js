@@ -104,6 +104,9 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 1rem;
 
+  height: 250px;
+  overflow-y: scroll;
+
   .viewBox {
     input {
       display: none;
