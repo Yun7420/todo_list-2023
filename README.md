@@ -23,11 +23,24 @@
 - build폴더 기반으로 웹 애플리케이션 서빙합니다. `serve -s build`
 
 ## 프로젝트를 통해 배운 내용
-### GlobalStyles로 reset css 작성
+### styled-component
+1. GlobalStyles로 reset css 작성
 ```
   createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
   import { createGlobalStyle } from "styled-components";
 
   // GlobalStyles 불러오기 (index.js에 삽입)
   import GlobalStyles from "./styles/GlobalStyles";
+```
+
+2. styled-component 반응형 코드 작성하기
+```
+  export const Wraaper = styled.div`
+  width: 500px;
+  height: 600px;
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
+`;
 ```
