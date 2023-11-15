@@ -23,7 +23,31 @@
 - build폴더 기반으로 웹 애플리케이션 서빙합니다. `serve -s build`
 
 ## 프로젝트를 통해 배운 내용
-### styled-component
+
+### Javascript
+1. seed Data 생성 및 localStorage 사용
+```
+  const seedData = () => {
+    const seed = [
+      { id: "list1", name: "REACT 학습하기", completed: true },
+      { id: "list2", name: "VUE 학습하기", completed: false },
+      { id: "list3", name: "NODE 학습하기", completed: false },
+      { id: "list3", name: "NEXT.JS 학습하기", completed: false },
+    ];
+
+    setData(seed);
+  };
+
+  const setData = (seed) => {
+    localStorage.setItem("todoList", JSON.stringify(seed));
+  };
+
+  if (!JSON.parse(localStorage.getItem("todoList"))) {
+    seedData();
+  }
+```
+
+### Styled-Component
 1. GlobalStyles로 reset css 작성
 ```
   createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
@@ -44,3 +68,17 @@
     }
   `;
 ```
+
+### React
+1. map 함수 활용
+```
+  const listItems = numbers.map((number, index) => {
+    console.log(number, index);
+  });
+
+  const tasksList = tasks.map((task) => (
+    <TodoList key={task.id} task={task} />
+  ));
+```
+
+## 프로젝트를 하면서 아쉬운점 
