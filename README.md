@@ -36,11 +36,11 @@
 2. styled-component 반응형 코드 작성하기
 ```
   export const Wraaper = styled.div`
-  width: 500px;
-  height: 600px;
+    width: 500px;
+    height: 600px;
 
-  @media only screen and (max-width: 600px) {
-    width: 90%;
-  }
-`;
+    @media only screen and (max-width: 600px) {
+      width: 90%;
+    }
+  `;
 ```
