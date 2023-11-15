@@ -14,6 +14,7 @@ const seedData = () => {
     { id: "list1", name: "REACT 학습하기", completed: true },
     { id: "list2", name: "VUE 학습하기", completed: false },
     { id: "list3", name: "NODE 학습하기", completed: false },
+    { id: "list3", name: "NEXT.JS 학습하기", completed: false },
   ];
 
   setData(seed);

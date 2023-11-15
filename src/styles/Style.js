@@ -24,6 +24,10 @@ export const Wraaper = styled.div`
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 5px 5px 15px #0057ae;
+  
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 // Main 스타일
@@ -47,6 +51,10 @@ export const TitleBox = styled.div`
     font-size: 1.5rem;
     font-weight: bold;
     color: #2c86da;
+  }
+
+  @media only screen and (max-width: 300px) {
+    flex-direction: column;
   }
 `;
 
