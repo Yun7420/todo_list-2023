@@ -23,11 +23,11 @@
 - build폴더 기반으로 웹 애플리케이션 서빙합니다. `serve -s build`
 
 ## 프로젝트를 통해 배운 내용
-
-- createGlobalStyle
-  import { createGlobalStyle } from "styled-components";
-  import reset from "styled-reset";
-
+### GlobalStyles로 reset css 작성
 ```
-코드 작성합니다.
+  createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
+  import { createGlobalStyle } from "styled-components";
+
+  // GlobalStyles 불러오기 (index.js에 삽입)
+  import GlobalStyles from "./styles/GlobalStyles";
 ```
