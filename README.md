@@ -27,3 +27,7 @@
 - createGlobalStyle
   import { createGlobalStyle } from "styled-components";
   import reset from "styled-reset";
+
+```
+코드 작성합니다.
+```
