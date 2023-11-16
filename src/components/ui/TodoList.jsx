@@ -16,6 +16,7 @@ const TodoList = ({ task, toggleTaskCompleted, editTaskCompleted, deleteTaskComp
 
   const onClickEvent = () => {
     setIsEdit(false);
+    setNewName(task.name);
   };
 
   // 할일 수정
@@ -44,10 +45,10 @@ const TodoList = ({ task, toggleTaskCompleted, editTaskCompleted, deleteTaskComp
   const editingTemplate = (
     <li className="editBox">
       <form onSubmit={onSubmitEvent}>
-        <input type="text" className="editInput" ref={inputRef} onChange={(e) => setNewName(e.target.value)} />
+        <input type="text" className="editInput" value={newName} ref={inputRef} onChange={(e) => setNewName(e.target.value)} />
         <div>
-          <button onClick={onClickEvent}>취소</button>
-          <button>저장</button>
+          <button type="button" onClick={onClickEvent}>취소</button>
+          <button type="submit" disabled={task.name === newName || !newName}>저장</button>
         </div>
       </form>
     </li>

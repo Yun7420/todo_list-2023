@@ -177,6 +177,11 @@ export const List = styled.ul`
       button:nth-of-type(2) {
         background-color: #2c86da;
         color: #fff;
+        opacity: 100%;
+      }
+
+      button:nth-of-type(2):disabled {
+        opacity: 50%;
       }
     }
   }

@@ -1,7 +1,28 @@
 # 나만의 할일목록 만들기 🧐
 
 프론트엔드(Front-End)과정을 듣고 배운 내용을 바탕으로 나만의 할일목록(ToDoList)를 제작하는 시간을 가져보았습니다.
-나만의 할일목록(ToDoList)를 제작하며 자바스크립트, 리액트를 좀 더 능숙하게 사용할 수 있었습니다.
+
+1. Figma(디자인 툴) 활용
+
+- 레이아웃 및 디자인을 제작
+
+2. 자바스크립트 활용
+
+- 현재 날짜를 표시할 수 있는 코드를 작성
+- 초기데이터를 생성하여 로컬스토리지에 저장하고 불러오기
+- 초기데이터 추가, 수정, 삭제 등...에 필요한 매개변수를 받아 if문을 통해 구분하고 스프레드 연산자 등을 통해서 업데이트
+
+3. 리액트 활용
+
+- 디자인한 내용을 component로 구성함으로써 component의 관리, 재사용성에 대해서 생각하기
+- Array.filter와 Array.map을 활용하여 component를 반복하고, 필터 버튼을 통해서 원하는 component만 출력
+- useState, props를 활용하여 초기데이터를 추가, 삭제, 수정 등... 에 필요한 값을 업데이트
+- useRef, useEffect를 활용하여 input태그에 접근하여 포커싱 효과주기
+- 삼항 연산자를 활용하여 className, disabled 속성에 css효과 적용
+
+4. 스타일 컴포넌트 활용
+
+- styled components를 활용하여 reset css를 설정하고 css작업 및 반응형 작업하기
 
 ## 완성작 미리보기
 
@@ -25,7 +46,9 @@
 ## 프로젝트를 통해 배운 내용
 
 ### Javascript
+
 1. seed Data 생성 및 localStorage 사용
+
 ```
   const seedData = () => {
     const seed = [
@@ -48,7 +71,9 @@
 ```
 
 ### Styled-Component
+
 1. GlobalStyles로 reset css 작성
+
 ```
   createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
   import { createGlobalStyle } from "styled-components";
@@ -58,6 +83,7 @@
 ```
 
 2. styled-component 반응형 코드 작성하기
+
 ```
   export const Wraaper = styled.div`
     width: 500px;
@@ -70,7 +96,9 @@
 ```
 
 ### React
+
 1. map 함수 활용
+
 ```
   const listItems = numbers.map((number, index) => {
     console.log(number, index);
@@ -81,4 +109,4 @@
   ));
 ```
 
-## 프로젝트를 하면서 아쉬운점 
+## 프로젝트를 하면서 아쉬운점
