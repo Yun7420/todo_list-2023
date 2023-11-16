@@ -47,46 +47,17 @@
 
 ### Javascript
 
-1. 현재날짜 생성
-
-- 사용 코드
+1. 초기데이터 생성 및 로컬스토리지 사용
 
 ```
-  let today = new Date();
-  let year = today.getFullYear();
-  let month = today.getMonth() + 1;
-  let day = today.getDate() ;
-```
-
-- 적용 코드
-
-```
-  const today = new Date();
-  const todayYear = today.getFullYear();
-  const todayMonth = today.getMonth() + 1;
-  const todayDate = today.getDate();
-
-  const monthList = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-  const todayTextMonth = monthList[todayMonth];
-```
-
-2. 초기데이터 생성 및 로컬스토리지 사용
-
-- 사용할 코드
-
-```
-  // 로컬스토리지 저장 및 불러오기
+  // 참고 : 로컬스토리지 저장 및 불러오기
   localStorage.setItem(key, value);
   localStorage.getItem(key);
 
-  // object > string || string > object (로컬스토리지에는 object값을 저장할 수 없기 때문이다.)
+  // 참고 : object > string || string > object (로컬스토리지에는 object값을 저장할 수 없기 때문이다.)
   JSON.stringify(value)
   JSON.parse(key)
-```
 
-- 적용 코드
-
-```
   const seedData = () => {
     const seed = [
       { id: "list1", name: "REACT 학습하기", completed: true },
@@ -107,54 +78,106 @@
   }
 ```
 
+2. 초기데이터 추가, 토글, 수정, 삭제
+
+```
+  // 추가
+  const addTask = (name) => {
+    const newTask = { id: `list-${new Date()}`, name, completed: false };
+    const newTasks = [...tasks, newTask];
+
+    setData(newTasks);
+    setTasks(newTasks);
+  };
+
+  // 토글
+  const toggleTaskCompleted = (id) => {
+    const toggleTask = tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, completed: !task.completed };
+      }
+
+      return task;
+    });
+
+    setData(toggleTask);
+    setTasks(toggleTask);
+  };
+
+  // 수정
+  const editTaskCompleted = (id, newName) => {
+    const editTask = tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, name: newName };
+      }
+
+      return task;
+    });
+
+    setData(editTask);
+    setTasks(editTask);
+  };
+
+  // 삭제
+  const deleteTaskCompleted = (id) => {
+    const deleteTask = tasks.filter((task) => {
+      return task.id !== id;
+    });
+
+    setData(deleteTask);
+    setTasks(deleteTask);
+  };
+```
+
 ### Styled-Component
 
 1. GlobalStyles로 reset css 작성
 
 ```
+  // 참고 : createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
+  import { createGlobalStyle } from "styled-components";
 
-createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
-import { createGlobalStyle } from "styled-components";
-
-// GlobalStyles 불러오기 (index.js에 삽입)
-import GlobalStyles from "./styles/GlobalStyles";
-
+  // 참고 : GlobalStyles 불러오기 (index.js에 삽입)
+  import GlobalStyles from "./styles/GlobalStyles";
 ```
 
 2. styled-component 반응형 코드 작성하기
 
 ```
-
-export const Wraaper = styled.div`
-width: 500px;
-height: 600px;
+  export const Wraaper = styled.div`
+    width: 500px;
+    height: 600px;
 
     @media only screen and (max-width: 600px) {
       width: 90%;
     }
-
-`;
-
+  `;
 ```
 
 ### React
 
-1. map 함수 활용
+1. fillter, map, props 활용
 
 ```
+  // 필터 데이터
+  const FilterMap = {
+    전체 : () => true,
+    완료 :  (task) => task.completed,
+    미완료 : (task) => !task.completed
+  }
 
-const listItems = numbers.map((number, index) => {
-console.log(number, index);
-});
-
-const tasksList = tasks.map((task) => (
-<TodoList key={task.id} task={task} />
-));
-
+  // 리스트 컴포넌트에 목록, 토글, 수정, 삭제 props 및 필터 리스트 생성
+  const tasksList = tasks.filter(FilterMap[filter]).map((task) => (
+    <TodoList
+      key={task.id}
+      task={task}
+      toggleTaskCompleted={toggleTaskCompleted}
+      editTaskCompleted={editTaskCompleted}
+      deleteTaskCompleted={deleteTaskCompleted}
+    />
+  ));
 ```
 
 ## 프로젝트를 하면서 아쉬운점
 
-```
-
-```
+TodoList 컴포넌트 안에 토글, 수정, 삭제에 관련한 함수들을 넣고 싶었지만 수정에 관련된 함수가 map 함수와 복잡하게 연결되어 있어서 쉽지 않았다.
