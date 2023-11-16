@@ -16,7 +16,7 @@
 
 - 디자인한 내용을 component로 구성함으로써 component의 관리, 재사용성에 대해서 생각하기
 - Array.filter와 Array.map을 활용하여 component를 반복하고, 필터 버튼을 통해서 원하는 component만 출력
-- useState, props를 활용하여 초기데이터를 추가, 삭제, 수정 등... 에 필요한 값을 업데이트
+- useState, props를 활용하여 초기데이터 추가, 삭제, 수정 등... 에 필요한 값을 업데이트
 - useRef, useEffect를 활용하여 input태그에 접근하여 포커싱 효과주기
 - 삼항 연산자를 활용하여 className, disabled 속성에 css효과 적용
 
@@ -47,7 +47,44 @@
 
 ### Javascript
 
-1. seed Data 생성 및 localStorage 사용
+1. 현재날짜 생성
+
+- 사용 코드
+
+```
+  let today = new Date();
+  let year = today.getFullYear();
+  let month = today.getMonth() + 1;
+  let day = today.getDate() ;
+```
+
+- 적용 코드
+
+```
+  const today = new Date();
+  const todayYear = today.getFullYear();
+  const todayMonth = today.getMonth() + 1;
+  const todayDate = today.getDate();
+
+  const monthList = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+  const todayTextMonth = monthList[todayMonth];
+```
+
+2. 초기데이터 생성 및 로컬스토리지 사용
+
+- 사용할 코드
+
+```
+  // 로컬스토리지 저장 및 불러오기
+  localStorage.setItem(key, value);
+  localStorage.getItem(key);
+
+  // object > string || string > object (로컬스토리지에는 object값을 저장할 수 없기 때문이다.)
+  JSON.stringify(value)
+  JSON.parse(key)
+```
+
+- 적용 코드
 
 ```
   const seedData = () => {
@@ -75,24 +112,29 @@
 1. GlobalStyles로 reset css 작성
 
 ```
-  createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
-  import { createGlobalStyle } from "styled-components";
 
-  // GlobalStyles 불러오기 (index.js에 삽입)
-  import GlobalStyles from "./styles/GlobalStyles";
+createGlobalStyle 불러오기 (GlobalStyles.js에 삽입)
+import { createGlobalStyle } from "styled-components";
+
+// GlobalStyles 불러오기 (index.js에 삽입)
+import GlobalStyles from "./styles/GlobalStyles";
+
 ```
 
 2. styled-component 반응형 코드 작성하기
 
 ```
-  export const Wraaper = styled.div`
-    width: 500px;
-    height: 600px;
+
+export const Wraaper = styled.div`
+width: 500px;
+height: 600px;
 
     @media only screen and (max-width: 600px) {
       width: 90%;
     }
-  `;
+
+`;
+
 ```
 
 ### React
@@ -100,13 +142,19 @@
 1. map 함수 활용
 
 ```
-  const listItems = numbers.map((number, index) => {
-    console.log(number, index);
-  });
 
-  const tasksList = tasks.map((task) => (
-    <TodoList key={task.id} task={task} />
-  ));
+const listItems = numbers.map((number, index) => {
+console.log(number, index);
+});
+
+const tasksList = tasks.map((task) => (
+<TodoList key={task.id} task={task} />
+));
+
 ```
 
 ## 프로젝트를 하면서 아쉬운점
+
+```
+
+```
