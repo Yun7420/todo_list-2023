@@ -1,7 +1,7 @@
 # 나만의 할일목록 만들기 🧐
 
-프론트엔드(Front-End)과정을 듣고 배운 내용을 바탕으로 나만의 할일목록(ToDoList)를 제작하는 시간을 가져보았습니다. </ br>
-참고 : 깃허브 Branch를 열어보면 각 해당하는 코드들을 확인하실 수 있도록 clip을 해두었습니다. </ br>
+프론트엔드(Front-End)과정을 듣고 배운 내용을 바탕으로 나만의 할일목록(ToDoList)를 제작하는 시간을 가져보았습니다. </br>
+참고 : 깃허브 Branch를 열어보면 각 해당하는 코드들을 확인하실 수 있도록 clip을 해두었습니다. </br>
 참고 : 깃허브 사이트에 build 하기 (https://velog.io/@nemo/github-page-deploy-%EB%B0%B0%ED%8F%AC)
 
 1. Figma(디자인 툴) 활용
