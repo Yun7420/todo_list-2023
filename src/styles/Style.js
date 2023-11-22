@@ -12,6 +12,9 @@ export const Container = styled.div`
 `;
 
 export const Wraaper = styled.div`
+  display: flex;
+  flex-direction: column;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -20,7 +23,7 @@ export const Wraaper = styled.div`
   padding: 1.5rem;
 
   width: 500px;
-  height: 600px;
+  height: 90%;
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 5px 5px 15px #0057ae;
@@ -112,7 +115,6 @@ export const List = styled.ul`
   flex-direction: column;
   gap: 1rem;
 
-  height: 250px;
   overflow-y: scroll;
 
   .viewBox {
