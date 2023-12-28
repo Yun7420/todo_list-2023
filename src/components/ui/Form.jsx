@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useRef, useEffect } from "react";
+
+// 스타일
 import { FormBox } from "../../styles/Style"
 
 const Form = ({ setData, tasks, setTasks }) => {

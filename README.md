@@ -4,8 +4,6 @@
 
 참고 : 깃허브 Branch를 열어보면 각 해당하는 코드들을 확인하실 수 있도록 clip을 해두었습니다.
 
-참고 : 깃허브 사이트에 build 하기 (https://velog.io/@nemo/github-page-deploy-%EB%B0%B0%ED%8F%AC)
-
 1. Figma(디자인 툴) 활용
 
 - 레이아웃 및 디자인을 제작
@@ -30,7 +28,7 @@
 
 ## 완성작 미리보기
 
-미리보기 : 링크를 준비중입니다.
+미리보기 : https://yun7420.github.io/todo_list-2023/
 
 ## 사용스택
 
@@ -47,6 +45,12 @@
 - static 파일 서빙 프로그램 생성합니다. `npm install -g(현재 컴퓨터 모든 경로 사용가능) serve`
 - build폴더 기반으로 웹 애플리케이션 서빙합니다. `serve -s build`
 
+## 프로젝트 참고 사이트
+
+1. 로컬스토리지 저장 및 불러오기 (https://studyingych.tistory.com/28)
+2. styled Component reset css 설정하기 (https://lakelouise.tistory.com/319)
+2. 깃허브 사이트에 build 하기 (https://velog.io/@nemo/github-page-deploy-%EB%B0%B0%ED%8F%AC)
+
 ## 프로젝트를 통해 배운 내용
 
 ### Javascript
@@ -54,14 +58,6 @@
 1. 초기데이터 생성 및 로컬스토리지 사용
 
 ```
-  // 참고 : 로컬스토리지 저장 및 불러오기
-  localStorage.setItem(key, value);
-  localStorage.getItem(key);
-
-  // 참고 : object > string || string > object (로컬스토리지에는 object값을 저장할 수 없기 때문이다.)
-  JSON.stringify(value)
-  JSON.parse(key)
-
   const seedData = () => {
     const seed = [
       { id: "list1", name: "REACT 학습하기", completed: true },

@@ -9,8 +9,21 @@ const todayYear = today.getFullYear();
 const todayMonth = today.getMonth() + 1;
 const todayDate = today.getDate();
 
-const monthList = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-const todayTextMonth = monthList[todayMonth];
+const monthList = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const todayTextMonth = monthList[todayMonth - 1];
 
 const Title = () => {
   return (
@@ -21,7 +34,7 @@ const Title = () => {
           <p>{todayTextMonth}</p>
           <p>{todayYear}</p>
         </div>
-       </div>
+      </div>
 
       <h1>TODO LIST</h1>
     </TitleBox>

@@ -27,7 +27,7 @@ export const Wraaper = styled.div`
   background-color: #fff;
   border-radius: 1rem;
   box-shadow: 5px 5px 15px #0057ae;
-  
+
   @media only screen and (max-width: 600px) {
     width: 90%;
   }
@@ -95,7 +95,7 @@ export const FilterBox = styled.div`
   button {
     padding: 0.5rem 0;
     flex: 1;
-    background-color:#555;
+    background-color: #555;
     border-radius: 0.5rem;
     color: #fff;
   }
@@ -103,7 +103,7 @@ export const FilterBox = styled.div`
   .active {
     background-color: #000;
   }
-`
+`;
 
 // TodoList 스타일
 export const ListLength = styled.h2`

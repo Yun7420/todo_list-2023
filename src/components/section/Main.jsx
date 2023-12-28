@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { List, ListLength } from "../../styles/Style"
 
 // 컴포넌트
 import Title from "../ui/Title";
 import FilterButton from "../ui/FilterButton";
 import Form from "../ui/Form";
 import TodoList from "../ui/TodoList";
+// 스타일
+import { List, ListLength } from "../../styles/Style"
 
 // 초기 데이터
 const seedData = () => {

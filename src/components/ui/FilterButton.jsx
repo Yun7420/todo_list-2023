@@ -1,4 +1,6 @@
 import React from "react";
+
+// 스타일
 import { FilterBox } from "../../styles/Style";
 
 const FilterButton = ({ FilterNames, filter, setFilter }) => {
