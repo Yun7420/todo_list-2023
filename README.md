@@ -52,7 +52,7 @@ Javascript, React, Styled Components를 활용하여 만든 나만의 할일목�
 
 1. 로컬스토리지 저장 및 불러오기 (https://studyingych.tistory.com/28)
 2. styled component reset css 설정하기 (https://lakelouise.tistory.com/319)
-2. 깃허브 사이트에 build 하기 (https://velog.io/@nemo/github-page-deploy-%EB%B0%B0%ED%8F%AC)
+3. 깃허브 사이트에 build 하기 (https://velog.io/@nemo/github-page-deploy-%EB%B0%B0%ED%8F%AC)
 
 ## 프로젝트를 통해 배운 내용
 
