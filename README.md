@@ -21,7 +21,7 @@
 
 - 디자인한 내용을 component로 구성함으로써 component의 관리, 재사용성에 대해서 생각하기
 - Array.filter와 Array.map을 활용하여 component를 반복하고, 필터 버튼을 통해서 원하는 component만 출력
-- useState, props를 활용하여 초기데이터 추가, 삭제, 수정 등... 에 필요한 값을 업데이트
+- useState, props를 활용하여 할일목록 추가, 삭제, 수정 등... 에 필요한 값을 업데이트
 - useRef, useEffect를 활용하여 input태그에 접근하여 포커싱 효과주기
 - 삼항 연산자를 활용하여 className, disabled 속성에 css효과 적용
 
