@@ -5,12 +5,6 @@ const TodoList = ({ task, toggleTaskCompleted, editTaskCompleted, deleteTaskComp
   // 포커스 효과
   const inputRef = useRef(null);
 
-  useEffect(() => {
-    if (isEdit) {
-      inputRef.current.focus();
-    }
-  });
-
   // 뷰 || 수정 화면 전환
   const [isEdit, setIsEdit] = useState(false);
 
@@ -25,9 +19,15 @@ const TodoList = ({ task, toggleTaskCompleted, editTaskCompleted, deleteTaskComp
   const onSubmitEvent = (e) => {
     e.preventDefault();
 
-    editTaskCompleted(task.id, newName);
     setIsEdit(false);
+    editTaskCompleted(task.id, newName);
   };
+
+  useEffect(() => {
+    if (isEdit) {
+      inputRef.current.focus();
+    }
+  });
 
   const viewTemplate = (
     <li className="viewBox">
