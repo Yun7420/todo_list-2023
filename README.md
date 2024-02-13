@@ -27,7 +27,7 @@ JavaScript, React, Styled Components를 활용하여 만든 나만의 할일목�
 
 4. 스타일 컴포넌트 활용
 
-- Styled Components를 활용하여 reset CSS를 설정하고 CSS작업 및 반응형 작업하기
+- Styled Components를 활용하여 Reset CSS를 설정하고 CSS작업 및 반응형 작업하기
 
 ## 완성작 미리보기
 
